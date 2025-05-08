@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+        .container {
+            display: flex;
+        }
+        .player {
+            color: red;
+        }
+        .komputer {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h3 class="player">Player</h3>
+            <img src="" id="gambar1" width="100px" height="100px">
+        </div>
+        <div>
+            <h3 class="komputer">Komputer</h3>
+            <img src="" id="gambar2" width="100px" height="100px">
+        </div>
+    </div>
+    <script>
+        let angka = prompt("Selamat Bermain!!!");
+        let komputer = Math.ceil(Math.random()*9)
+        
+        if (angka < 0) {
+            alert("Input angka dari 1-9!")
+            
+        }
+        if (angka > 9) {
+            alert("Input angka dari 1-9!") 
+        }
+
+        document.getElementById("gambar1").src = "img/" +angka+".jpg";
+        document.getElementById("gambar2").src = "img/"+komputer+".jpg"
+
+        if (angka > komputer) {
+            document.writeln ("PLAYER WIN")
+        } else if (angka < komputer) {
+            document.writeln ("PLAYER LOSE")
+        } else if (angka == komputer) {
+            document.writeln ("DRAW")
+        }
+    </script>
+</body>
+</html>

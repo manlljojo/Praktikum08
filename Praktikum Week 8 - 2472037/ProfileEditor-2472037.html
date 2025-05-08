@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+        }
+        .container {
+            display: grid;
+        }
+        button {
+            background-color: green;
+            color: white;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Profile Card Editor</h1>
+        <img src="" alt=""> Profile Picture
+        <h3>John Doe</h3>
+        <input type="text" value="Enter New Name" id="nama">
+        <input type="text" value="Enter New Bio">
+        <input type="url" value="Enter Image URL">
+        <button onclick="ganti()">Update Profile</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+    <script>
+        function ganti() {
+            let nama = document.getElementById("nama").value
+        }
+        
+    </script>
+</body>
+</html>
