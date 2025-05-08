@@ -1,28 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Generate Color</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      transition: background-color 0.5s;
+    }
+    .card {
+      width: 300px;
+      padding: 20px;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background-color: white;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div id="what"></div>
-    <button onclick="ganti()">Ganti</button>
-    <script>
-        let kotak = document.getElementById("what").innerHTML = b;
-        let b = Math.floor(Math.random() * 10);
-        kotak.innerHTML = b
+  <div class="card">
+    <h2>Generate Color</h2>
+    <p id="colorCode">rgb(255, 255, 255)</p>
+    <button onclick="generateColor()">Generate</button>
+  </div>
 
-        function ganti(){
-            if(red >=0 ) and (red <= 255 ) {
-                warna == red;
-            } else if(green >=0) and (green <= 255){
-                warna == green;
-            } else if(blue >=0 ) and (blue <= 255) {
-                warna = blue;
-            }
-        }
-    </script>
+  <script>
+    function generateColor() {
+      let r = Math.floor(Math.random() * 256);
+      let g = Math.floor(Math.random() * 256);
+      let b = Math.floor(Math.random() * 256);
+      let rgb = `rgb(${r}, ${g}, ${b})`;
+
+      document.body.style.backgroundColor = rgb;
+      document.getElementById("colorCode").textContent = rgb;
+    }
+  </script>
 </body>
 </html>
